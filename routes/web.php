@@ -3,6 +3,8 @@
 use App\Http\Controllers\Settings;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\RegistrationController;
+
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
@@ -14,13 +16,13 @@ Route::view('dashboard', 'dashboard')
     
 Route::middleware(['auth', 'verified'])->group(function() {
     Route::view('main', 'main')->name("main");
-    Route::view('registrations', 'registrations')->name("registrations");
 
+    Route::get('registrations', [RegistrationController::class, 'index'])->name('registration.index');
     
 });
 
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function () {    
     Route::get('settings/profile', [Settings\ProfileController::class, 'edit'])->name('settings.profile.edit');
     Route::put('settings/profile', [Settings\ProfileController::class, 'update'])->name('settings.profile.update');
     Route::delete('settings/profile', [Settings\ProfileController::class, 'destroy'])->name('settings.profile.destroy');

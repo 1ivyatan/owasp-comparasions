@@ -16,7 +16,7 @@
 
                             
                             <!-- main page -->
-                            <x-layouts.sidebar-link href="{{ route('registrations') }}" icon='fas-house'
+                            <x-layouts.sidebar-link href="{{ route('registration.index') }}" icon='fas-house'
                                 :active="request()->routeIs('registrations*')">Pieteikumi</x-layouts.sidebar-link>
                         </ul>
                     </nav>
