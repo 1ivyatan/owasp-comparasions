@@ -13,6 +13,11 @@
                             <!-- main page -->
                             <x-layouts.sidebar-link href="{{ route('main') }}" icon='fas-house'
                                 :active="request()->routeIs('main*')">Sākums</x-layouts.sidebar-link>
+
+                            
+                            <!-- main page -->
+                            <x-layouts.sidebar-link href="{{ route('registrations') }}" icon='fas-house'
+                                :active="request()->routeIs('registrations*')">Pieteikumi</x-layouts.sidebar-link>
                         </ul>
                     </nav>
                 </div>

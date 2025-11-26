@@ -13,8 +13,8 @@ Route::view('dashboard', 'dashboard')
 
     
 Route::middleware(['auth', 'verified'])->group(function() {
-
     Route::view('main', 'main')->name("main");
+    Route::view('registrations', 'registrations')->name("registrations");
 
     
 });
