@@ -19,6 +19,7 @@ Route::middleware(['auth', 'verified'])->group(function() {
 
     Route::get('registrations', [RegistrationController::class, 'index'])->name('registration.index');
     
+    Route::get('registrations/create', [RegistrationController::class, 'create'])->name('registration.create');
 });
 
 

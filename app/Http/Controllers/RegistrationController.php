@@ -13,4 +13,9 @@ class RegistrationController extends Controller
     {
         return view('registrations.index');
     }
+
+    public function create(Request $request): View
+    {
+        return view('registrations.create');
+    }
 }

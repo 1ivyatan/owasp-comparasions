@@ -15,7 +15,7 @@
                                 :active="request()->routeIs('main*')">Sākums</x-layouts.sidebar-link>
 
                             
-                            <!-- main page -->
+                            <!-- registrations page -->
                             <x-layouts.sidebar-link href="{{ route('registration.index') }}" icon='fas-house'
                                 :active="request()->routeIs('registrations*')">Pieteikumi</x-layouts.sidebar-link>
                         </ul>
