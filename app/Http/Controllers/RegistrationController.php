@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\Registration;
 
 use App\Http\Requests\Registration\RegistrationStoreRequest;
+use App\Http\Requests\RegistrationRequest;
 
 class RegistrationController extends Controller
 {
@@ -26,6 +27,10 @@ class RegistrationController extends Controller
 
     public function show(Request $request, string $id): View
     {
+        $registration = Registration::findOrFail($id);
+
+        dd($registration);
+
         return view('registration.show');
     }
 
