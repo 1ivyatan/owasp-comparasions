@@ -33,11 +33,10 @@ class RegistrationController extends Controller
     {
         $validated = $request->validated();
 
-        //Registration::create($validated);
-       // dd($validated);
+        $registration = Registration::create($validated);
 
         return redirect(route('registration.show', [
-            'id' => '1'
+            'id' => $registration->id
         ]));
     }
 }
