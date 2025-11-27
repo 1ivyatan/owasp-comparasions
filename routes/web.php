@@ -18,8 +18,12 @@ Route::middleware(['auth', 'verified'])->group(function() {
     Route::view('main', 'main')->name("main");
 
     Route::get('registrations', [RegistrationController::class, 'index'])->name('registration.index');
+
+    Route::get('registrations/{id}', [RegistrationController::class, 'show'])->name('registration.show');
     
     Route::get('registrations/create', [RegistrationController::class, 'create'])->name('registration.create');
+
+    Route::post('registrations/create', [RegistrationController::class, 'store'])->name('registration.store');
 });
 
 
