@@ -11,27 +11,22 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\Registration;
 
 use App\Http\Requests\Registration\RegistrationStoreRequest;
-use App\Http\Requests\RegistrationRequest;
 
 class RegistrationController extends Controller
 {
-    public function index(Request $request): View
+    public function index(): View
     {
-        return view('registration.index');
+        return view('registrations.index');
     }
 
-    public function create(Request $request): View
+    public function create(): View
     {
-        return view('registration.create');
+        return view('registrations.create');
     }
 
-    public function show(Request $request, string $id): View
+    public function show(Registration $registration): View
     {
-        $registration = Registration::findOrFail($id);
-
-        dd($registration);
-
-        return view('registration.show');
+        return view('registrations.show', compact('registration'));
     }
 
     public function store(RegistrationStoreRequest $request): RedirectResponse
@@ -40,7 +35,7 @@ class RegistrationController extends Controller
 
         $registration = Registration::create($validated);
 
-        return redirect(route('registration.show', [
+        return redirect(route('registrations.show', [
             'id' => $registration->id
         ]));
     }
