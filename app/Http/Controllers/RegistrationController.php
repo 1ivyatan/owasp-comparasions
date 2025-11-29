@@ -29,6 +29,11 @@ class RegistrationController extends Controller
         return view('registrations.show', compact('registration'));
     }
 
+    public function edit(Registration $registration): View
+    {
+        return view('registrations.edit', compact('registration'));
+    }
+
     public function store(RegistrationStoreRequest $request): RedirectResponse
     {
         $validated = $request->validated();
