@@ -25,7 +25,7 @@
     </div>
 
     <div>
-        <x-forms.select label="Prioritāte" name="priority" placeholder="..." :items="[ ['name' => 'Zema', 'value' => 'low'], ['name' => 'Vidēja', 'value' => 'med'], ['name' => 'Augsta', 'value' => 'high'] ]" value="{{ isset($content) ? $content->priority : '' }}"/>
+        <x-forms.select label="Prioritāte" name="priority" placeholder="..." :items="App\Enums\Registration\Priority::values()" value="{{ isset($content) ? $content->priority : '' }}"/>
     </div>
         
     <x-button type="primary" class="w-full">{{ __('Saglabāt') }}</x-button>
