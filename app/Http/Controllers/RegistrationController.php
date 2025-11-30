@@ -18,7 +18,7 @@ class RegistrationController extends Controller
     {
         //$registrations = Registration::latest();
 
-        return view('registrations.index')->with('status', 'Pieteikums tika saglabāts!');
+        return view('registrations.index');
     }
 
     public function create(): View
@@ -28,7 +28,7 @@ class RegistrationController extends Controller
 
     public function show(Registration $registration): View
     {
-        return view('registrations.show', compact('registration'))->with('status', 'Pieteikums tika saglabāts!');
+        return view('registrations.show', compact('registration'));
     }
 
     public function edit(Registration $registration): View
