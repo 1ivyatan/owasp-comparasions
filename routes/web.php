@@ -8,6 +8,10 @@ use App\Http\Controllers\RegistrationController;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::get('/privacy', function () {
+    return view('privacy');
+})->name('privacy');
     
 Route::middleware(['auth', 'verified'])->group(function() {
     Route::view('main', 'main')->name("main");
