@@ -64,6 +64,6 @@ class RegistrationController extends Controller
 
         $registration->delete();
 
-        return to_route('registrations.index')->with('status', __('Pieteikums'.$id.'tika dzēsts!'));
+        return to_route('registrations.index')->with('status', __('Pieteikums #'.$id.' tika dzēsts!'));
     }
 }
