@@ -7,4 +7,11 @@
 
     <p> here be crude (yeeeeeees pun intended), now indexed in a controller </p>
 
+    @forelse ( $registrations as $registration )
+        {{ $registration }}    
+    @empty
+        ummm
+    @endforelse
+    
+
 </x-layouts.app>

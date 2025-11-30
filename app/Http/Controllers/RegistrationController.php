@@ -16,9 +16,9 @@ class RegistrationController extends Controller
 {
     public function index(): View
     {
-        //$registrations = Registration::latest();
+        $registrations = Registration::all();
 
-        return view('registrations.index');
+        return view('registrations.index', compact('registrations'));
     }
 
     public function create(): View
