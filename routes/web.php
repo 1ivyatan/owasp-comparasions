@@ -8,27 +8,11 @@ use App\Http\Controllers\RegistrationController;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
-
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
-
     
 Route::middleware(['auth', 'verified'])->group(function() {
     Route::view('main', 'main')->name("main");
-
-    //Route::get('registrations', [RegistrationController::class, 'index'])->name('registration.index');
-
     Route::resource('registrations', RegistrationController::class);
-
-
-//    Route::get('registrations/{id}', [RegistrationController::class, 'show'])->name('registration.show');
-    
-  //  Route::get('registrations/create', [RegistrationController::class, 'create'])->name('registration.create');
-
-    //Route::post('registrations/create', [RegistrationController::class, 'store'])->name('registration.store');
 });
-
 
 Route::middleware(['auth'])->group(function () {    
     Route::get('settings/profile', [Settings\ProfileController::class, 'edit'])->name('settings.profile.edit');

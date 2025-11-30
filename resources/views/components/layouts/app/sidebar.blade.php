@@ -5,15 +5,9 @@
                     <!-- Sidebar Menu -->
                     <nav class="flex-1 overflow-y-auto custom-scrollbar py-4">
                         <ul class="space-y-1 px-2">
-                            <!-- Dashboard -->
-                            <x-layouts.sidebar-link href="{{ route('dashboard') }}" icon='fas-house'
-                                :active="request()->routeIs('dashboard*')">Dashboard</x-layouts.sidebar-link>
-
-                            
                             <!-- main page -->
                             <x-layouts.sidebar-link href="{{ route('main') }}" icon='fas-house'
                                 :active="request()->routeIs('main*')">Sākums</x-layouts.sidebar-link>
-
                             
                             <!-- registrations page -->
                             <x-layouts.sidebar-link href="{{ route('registrations.index') }}" icon='fas-house'
