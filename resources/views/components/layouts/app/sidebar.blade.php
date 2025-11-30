@@ -16,6 +16,11 @@
                             <!-- comparasions page -->
                             <x-layouts.sidebar-link href="{{ route('comparasions') }}" icon='fas-spider'
                                 :active="request()->routeIs('comparasions*')">Droš. salīdzinājumi</x-layouts.sidebar-link>
+
+
+                            <!-- privacy page -->
+                            <x-layouts.sidebar-link href="{{ route('privacy') }}" icon='fas-eye-slash' target="_blank"
+                            >Privātums</x-layouts.sidebar-link>
                         </ul>
                     </nav>
                 </div>
