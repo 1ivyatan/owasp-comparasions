@@ -4,7 +4,7 @@
     'content'
 ])
 
-<form method="{{ $method }}" class="space-y-3" action={{ $action }}>
+<form method="POST" class="space-y-3" action={{ $action }}>
     @csrf
     @method($method)
 
