@@ -16,11 +16,9 @@ class RegistrationController extends Controller
 {
     public function index(): View
     {
-        $registrations = Registration::latest();
+        //$registrations = Registration::latest();
 
-        dd($registrations);
-
-        return view('registrations.index');
+        return view('registrations.index')->with('status', 'Pieteikums tika saglabāts!');
     }
 
     public function create(): View
@@ -30,7 +28,7 @@ class RegistrationController extends Controller
 
     public function show(Registration $registration): View
     {
-        return view('registrations.show', compact('registration'));
+        return view('registrations.show', compact('registration'))->with('status', 'Pieteikums tika saglabāts!');
     }
 
     public function edit(Registration $registration): View
@@ -44,9 +42,9 @@ class RegistrationController extends Controller
 
         $registration = Registration::create($validated);
 
-        return redirect(route('registrations.show', [
+        return to_route('registrations.show', [
             'registration' => $registration->id
-        ]));
+        ])->with('status', __('Pieteikums tika izveidots!'));
     }
 
     public function update(RegistrationStoreRequest $request, Registration $registration): RedirectResponse
@@ -55,15 +53,17 @@ class RegistrationController extends Controller
 
         $registration->update($validated);
 
-        return redirect(route('registrations.show', [
+        return to_route('registrations.show', [
             'registration' => $registration->id
-        ]));
+        ])->with('status', __('Pieteikuma dati tika izmanītas!'));
     }
 
     public function destroy(Registration $registration): RedirectResponse
     {
+        $id = $registration->id;
+
         $registration->delete();
 
-        return redirect(route('registrations.index'));
+        return to_route('registrations.index')->with('status', __('Pieteikums'.$id.'tika dzēsts!'));
     }
 }
