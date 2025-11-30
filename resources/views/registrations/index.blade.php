@@ -78,7 +78,7 @@
                         </td>
                         <td class="p-4">
                             <p class="text-sm">
-                                <x-button tag="a" type="secondary" href="{{ route('registrations.edit', $registration->id ) }}">{{ __('Rediģēt') }}</x-button>
+                                <x-button tag="a" type="secondary" href="{{ route('registrations.show', $registration->id ) }}">{{ __('Skatīt') }}</x-button>
                             </p>
                         </td>
                     </tr>
