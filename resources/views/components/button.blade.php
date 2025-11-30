@@ -2,6 +2,7 @@
     'type' => 'primary',
     'buttonType' => 'submit',
     'tag' => 'button',
+    'link' => ''
 ])
 
 @php
@@ -14,6 +15,10 @@
     ]);
 @endphp
 
-<{{ $tag }} {{ $attributes->merge(['class' => $styleClasses]) }}>
+<{{ $tag }} {{ $attributes->merge(['class' => $styleClasses]) }}
+    @isset($link)
+        href="{{ $link }}"
+    @endisset
+>
     {{ $slot }}
-    </{{ $tag }}>
+</{{ $tag }}>
