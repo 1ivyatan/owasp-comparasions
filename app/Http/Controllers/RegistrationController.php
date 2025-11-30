@@ -16,6 +16,10 @@ class RegistrationController extends Controller
 {
     public function index(): View
     {
+        $registrations = Registration::latest();
+
+        dd($registrations);
+
         return view('registrations.index');
     }
 
@@ -41,7 +45,7 @@ class RegistrationController extends Controller
         $registration = Registration::create($validated);
 
         return redirect(route('registrations.show', [
-            'id' => $registration->id
+            'registration' => $registration->id
         ]));
     }
 
@@ -52,7 +56,7 @@ class RegistrationController extends Controller
         $registration->update($validated);
 
         return redirect(route('registrations.show', [
-            'id' => $registration->id
+            'registration' => $registration->id
         ]));
     }
 
