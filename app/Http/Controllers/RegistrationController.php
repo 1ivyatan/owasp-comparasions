@@ -44,4 +44,22 @@ class RegistrationController extends Controller
             'id' => $registration->id
         ]));
     }
+
+    public function update(RegistrationStoreRequest $request, Registration $registration): RedirectResponse
+    {
+        $validated = $request->validated();
+
+        $registration->update($validated);
+
+        return redirect(route('registrations.show', [
+            'id' => $registration->id
+        ]));
+    }
+
+    public function destroy(Registration $registration): RedirectResponse
+    {
+        $registration->delete();
+
+        return redirect(route('registrations.index'));
+    }
 }
