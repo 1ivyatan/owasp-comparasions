@@ -10,7 +10,7 @@
                                 :active="request()->routeIs('main*')">Sākums</x-layouts.sidebar-link>
                             
                             <!-- registrations page -->
-                            <x-layouts.sidebar-link href="{{ route('registrations.index') }}" icon='fas-house'
+                            <x-layouts.sidebar-link href="{{ route('registrations.index') }}" icon='fas-book'
                                 :active="request()->routeIs('registrations*')">Pieteikumi</x-layouts.sidebar-link>
                         </ul>
                     </nav>
