@@ -1,8 +1,7 @@
 <x-layouts.welcome.app>
 
-                <h1 class="mb-1 font-medium">Let's get started</h1>
-                <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">Laravel has an incredibly rich ecosystem. <br>We
-                    suggest starting with the following.</p>
+                <h1 class="mb-1 font-medium">Iesāksim izmantot Laravelu!</h1>
+                <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">Laravelam ir plaša ekosistēma. <br> Mēs iesakam: </p>
                 <ul class="flex flex-col mb-4 lg:mb-6">
                     <li
                         class="flex items-center gap-4 py-2 relative before:border-l before:border-[#e3e3e0] dark:before:border-[#3E3E3A] before:top-1/2 before:bottom-0 before:left-[0.4rem] before:absolute">
@@ -13,10 +12,10 @@
                             </span>
                         </span>
                         <span>
-                            Read the
+                            Lasīt
                             <a href="https://laravel.com/docs" target="_blank"
                                 class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
-                                <span>Documentation</span>
+                                <span>Dokumentāciju</span>
                                 <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="w-2.5 h-2.5">
                                     <path d="M7.70833 6.95834V2.79167H3.54167M2.5 8L7.5 3.00001" stroke="currentColor"
@@ -34,25 +33,17 @@
                             </span>
                         </span>
                         <span>
-                            Watch video tutorials at
+                            Skatīt
                             <a href="https://laracasts.com" target="_blank"
                                 class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
-                                <span>Laracasts</span>
+                                <span>Laracast'u</span>
                                 <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="w-2.5 h-2.5">
                                     <path d="M7.70833 6.95834V2.79167H3.54167M2.5 8L7.5 3.00001" stroke="currentColor"
                                         stroke-linecap="square" />
                                 </svg>
-                            </a>
+                            </a> mācību video.
                         </span>
-                    </li>
-                </ul>
-                <ul class="flex gap-3 text-sm leading-normal">
-                    <li>
-                        <a href="https://cloud.laravel.com" target="_blank"
-                            class="inline-block dark:bg-[#eeeeec] dark:border-[#eeeeec] dark:text-[#1C1C1A] dark:hover:bg-white dark:hover:border-white hover:bg-black hover:border-black px-5 py-1.5 bg-[#1b1b18] rounded-sm border border-black text-white text-sm leading-normal">
-                            Deploy now
-                        </a>
                     </li>
                 </ul>
             </div>
