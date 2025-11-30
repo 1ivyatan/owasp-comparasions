@@ -12,6 +12,10 @@
                             <!-- registrations page -->
                             <x-layouts.sidebar-link href="{{ route('registrations.index') }}" icon='fas-book'
                                 :active="request()->routeIs('registrations*')">Pieteikumi</x-layouts.sidebar-link>
+
+                            <!-- comparasions page -->
+                            <x-layouts.sidebar-link href="{{ route('comparasions') }}" icon='fas-spider'
+                                :active="request()->routeIs('comparasions*')">Droš. salīdzinājumi</x-layouts.sidebar-link>
                         </ul>
                     </nav>
                 </div>

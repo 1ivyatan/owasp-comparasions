@@ -11,6 +11,7 @@ Route::get('/', function () {
     
 Route::middleware(['auth', 'verified'])->group(function() {
     Route::view('main', 'main')->name("main");
+    Route::view('comps', 'comparasions')->name("comparasions");
     Route::resource('registrations', RegistrationController::class);
 });
 
