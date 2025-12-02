@@ -62,7 +62,7 @@
                     </p>
                 </td>
                 <td class="p-4">
-                    <p class="text-sm">
+                    <p class="text-sm wrap-break-word">
                         {{ $content->title }}
                     </p>
                 </td>
@@ -106,7 +106,7 @@
     <div class="p-4 font-bold text-slate-500 border-b border-slate-300 bg-slate-50">
         {{ __('Ziņojums') }}
     </div>
-    <div class="p-4">
+    <div class="p-4 overflow-y-auto wrap-break-word">
         {{ $content->message }}
     </div>
 </div>

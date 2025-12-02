@@ -59,7 +59,7 @@
                                 {{ $registration->phone }}
                             </p>
                         </td>
-                        <td class="p-4">
+                        <td class="p-4 wrap-break-word">
                             <p class="text-sm">
                                 {{ $registration->title }}
                             </p>
